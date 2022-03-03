@@ -39,3 +39,6 @@ class Plan(models.Model):
     price = models.CharField(max_length=50)
     description = models.CharField(max_length=350)
     test = models.ManyToManyField(TestDetail)
+    
+    def __str__(self):
+        return self.name
